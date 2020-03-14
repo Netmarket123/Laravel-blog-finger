@@ -5,8 +5,7 @@
     <div class="col-md-6">
         <h1>@lang('auth.reset_password')</h1>
 
-        {!! Form::open(['route' => 'password.request', 'role' => 'form', 'method' => 'POST']) !!}
-        {!! Form::hidden('token', $token) !!}
+        {!! Form::open(['route' => 'password.reset', 'role' => 'form', 'method' => 'POST']) !!}
             <div class="form-group">
                 {!! Form::label('email', __('validation.attributes.email'), ['class' => 'control-label']) !!}
                 {!! Form::email('email', $email or old('email'), ['class' => 'form-control' . ($errors->has('email') ? ' is-invalid' : ''), 'required']) !!}
